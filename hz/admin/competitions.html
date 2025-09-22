@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛事管理 - 魔方赛事网</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1>会枝Cubing</h1>
+                <div class="user-actions">
+                    <a href="login.html">登录</a>
+                    <a href="../user/register.html">注册</a>
+                    <a href="../admin/login.html">管理员</a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../competitions.html">赛事</a></li>
+                    <li><a href="../rankings.html">排名</a></li>
+                    <li><a href="../tutorials.html">教程</a></li>
+                    <li><a href="../algorithms.html">公式</a></li>
+                    <li><a href="../personal-records.html">成绩</a></li>
+                    <li><a href="../rules.html">规则</a></li>
+                    <li><a href="../organizers.html">组织者</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2>赛事管理</h2>
+            
+            <div class="admin-actions">
+                <button class="btn primary" id="add-competition">添加新赛事</button>
+                <div class="search-box">
+                    <input type="text" id="search-competitions" placeholder="搜索赛事...">
+                    <button class="btn">搜索</button>
+                </div>
+            </div>
+            
+            <div class="competitions-table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>赛事名称</th>
+                            <th>日期</th>
+                            <th>地点</th>
+                            <th>状态</th>
+                            <th>报名人数</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025WCA珠海魔方公开赛</td>
+                            <td>2025-09-15 至 2025-09-17</td>
+                            <td>广东省珠海市</td>
+                            <td><span class="status approved">已批准</span></td>
+                            <td>142</td>
+                            <td>
+                                <button class="btn small">编辑</button>
+                                <button class="btn small danger">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2025上海魔方锦标赛</td>
+                            <td>2025-10-02 至 2025-10-04</td>
+                            <td>上海市黄浦区</td>
+                            <td><span class="status pending">待审核</span></td>
+                            <td>87</td>
+                            <td>
+                                <button class="btn small">编辑</button>
+                                <button class="btn small danger">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2025北京秋季魔方赛</td>
+                            <td>2025-10-20 至 2025-10-21</td>
+                            <td>北京市海淀区</td>
+                            <td><span class="status approved">已批准</span></td>
+                            <td>65</td>
+                            <td>
+                                <button class="btn small">编辑</button>
+                                <button class="btn small danger">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2025杭州春季赛</td>
+                            <td>2025-11-05 至 2025-11-06</td>
+                            <td>浙江省杭州市</td>
+                            <td><span class="status rejected">已拒绝</span></td>
+                            <td>0</td>
+                            <td>
+                                <button class="btn small">编辑</button>
+                                <button class="btn small danger">删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <span>...</span>
+                <a href="#" class="page-link">5</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 粗饼·中国魔方赛事网. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../js/admin.js"></script>
+</body>
+</html>

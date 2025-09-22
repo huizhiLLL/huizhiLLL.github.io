@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻管理 - 魔方赛事网</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1>会枝Cubing</h1>
+                <div class="user-actions">
+                    <a href="login.html">登录</a>
+                    <a href="../user/register.html">注册</a>
+                    <a href="../admin/login.html">管理员</a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../competitions.html">赛事</a></li>
+                    <li><a href="../rankings.html">排名</a></li>
+                    <li><a href="../tutorials.html">教程</a></li>
+                    <li><a href="../algorithms.html">公式</a></li>
+                    <li><a href="../personal-records.html">成绩</a></li>
+                    <li><a href="../rules.html">规则</a></li>
+                    <li><a href="../organizers.html">组织者</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2>新闻管理</h2>
+            
+            <div class="admin-actions">
+                <button class="btn primary" id="add-news">发布新闻</button>
+                <div class="search-box">
+                    <input type="text" id="search-news" placeholder="搜索新闻...">
+                    <button class="btn">搜索</button>
+                </div>
+            </div>
+            
+            <div class="news-table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>标题</th>
+                            <th>作者</th>
+                            <th>发布日期</th>
+                            <th>状态</th>
+                            <th>浏览量</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025年粗饼网第三季度末和第四季度初赛事申请公告</td>
+                            <td>WCA通讯组中国团队</td>
+                            <td>2025-07-09</td>
+                            <td><span class="status published">已发布</span></td>
+                            <td>1,240</td>
+                            <td>
+                                <button class="btn small">编辑</button>
+                                <button class="btn small danger">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2025WCA珠海魔方公开赛公示及报名</td>
+                            <td>赛事审核组</td>
+                            <td>2025-05-04</td>
+                            <td><span class="status published">已发布</span></td>
+                            <td>876</td>
+                            <td>
+                                <button class="btn small">编辑</button>
+                                <button class="btn small danger">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2025年中国魔方锦标赛筹备启动</td>
+                            <td>编辑部</td>
+                            <td>2025-04-15</td>
+                            <td><span class="status published">已发布</span></td>
+                            <td>652</td>
+                            <td>
+                                <button class="btn small">编辑</button>
+                                <button class="btn small danger">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>新的WCA规则更新</td>
+                            <td>规则委员会</td>
+                            <td>2025-03-22</td>
+                            <td><span class="status draft">草稿</span></td>
+                            <td>0</td>
+                            <td>
+                                <button class="btn small">编辑</button>
+                                <button class="btn small danger">删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <span>...</span>
+                <a href="#" class="page-link">8</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 粗饼·中国魔方赛事网. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../js/admin.js"></script>
+</body>
+</html>

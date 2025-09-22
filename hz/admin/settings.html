@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统设置 - 魔方赛事网</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1>会枝Cubing</h1>
+                <div class="user-actions">
+                    <a href="login.html">登录</a>
+                    <a href="../user/register.html">注册</a>
+                    <a href="../admin/login.html">管理员</a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../competitions.html">赛事</a></li>
+                    <li><a href="../rankings.html">排名</a></li>
+                    <li><a href="../tutorials.html">教程</a></li>
+                    <li><a href="../algorithms.html">公式</a></li>
+                    <li><a href="../personal-records.html">成绩</a></li>
+                    <li><a href="../rules.html">规则</a></li>
+                    <li><a href="../organizers.html">组织者</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2>系统设置</h2>
+            
+            <div class="settings-tabs">
+                <button class="tab-button active" data-tab="general">常规设置</button>
+                <button class="tab-button" data-tab="email">邮件设置</button>
+                <button class="tab-button" data-tab="registration">注册设置</button>
+                <button class="tab-button" data-tab="notifications">通知设置</button>
+            </div>
+            
+            <div class="settings-content">
+                <div class="settings-panel active" id="general-settings">
+                    <h3>常规设置</h3>
+                    
+                    <div class="form-group">
+                        <label for="site-name">网站名称</label>
+                        <input type="text" id="site-name" value="粗饼·中国魔方赛事网">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="site-description">网站描述</label>
+                        <textarea id="site-description" rows="3">中国魔方赛事信息平台，提供赛事报名、成绩查询、教程学习等服务。</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="admin-email">管理员邮箱</label>
+                        <input type="email" id="admin-email" value="admin@cubing.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maintenance-mode">维护模式</label>
+                        <select id="maintenance-mode">
+                            <option value="disabled">关闭</option>
+                            <option value="enabled">开启</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn primary">保存设置</button>
+                    </div>
+                </div>
+                
+                <div class="settings-panel" id="email-settings">
+                    <h3>邮件设置</h3>
+                    
+                    <div class="form-group">
+                        <label for="smtp-host">SMTP主机</label>
+                        <input type="text" id="smtp-host" value="smtp.cubing.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="smtp-port">SMTP端口</label>
+                        <input type="number" id="smtp-port" value="587">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="smtp-username">SMTP用户名</label>
+                        <input type="text" id="smtp-username" value="noreply@cubing.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="smtp-password">SMTP密码</label>
+                        <input type="password" id="smtp-password" value="********">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email-from">发件人邮箱</label>
+                        <input type="email" id="email-from" value="noreply@cubing.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn primary">保存设置</button>
+                        <button class="btn">测试邮件</button>
+                    </div>
+                </div>
+                
+                <div class="settings-panel" id="registration-settings">
+                    <h3>注册设置</h3>
+                    
+                    <div class="form-group">
+                        <label for="allow-registration">
+                            <input type="checkbox" id="allow-registration" checked> 允许用户注册
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email-verification">
+                            <input type="checkbox" id="email-verification" checked> 需要邮箱验证
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="default-role">默认用户角色</label>
+                        <select id="default-role">
+                            <option value="user" selected>普通用户</option>
+                            <option value="organizer">赛事组织者</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="min-password-length">密码最小长度</label>
+                        <input type="number" id="min-password-length" value="8" min="6" max="20">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn primary">保存设置</button>
+                    </div>
+                </div>
+                
+                <div class="settings-panel" id="notification-settings">
+                    <h3>通知设置</h3>
+                    
+                    <div class="form-group">
+                        <label for="notify-new-user">
+                            <input type="checkbox" id="notify-new-user" checked> 新用户注册时通知管理员
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notify-new-competition">
+                            <input type="checkbox" id="notify-new-competition" checked> 新赛事申请时通知管理员
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notify-competition-result">
+                            <input type="checkbox" id="notify-competition-result" checked> 赛事结果更新时通知参赛者
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notify-newsletter">
+                            <input type="checkbox" id="notify-newsletter"> 定期发送新闻简报
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn primary">保存设置</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 粗饼·中国魔方赛事网. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../js/admin.js"></script>
+</body>
+</html>

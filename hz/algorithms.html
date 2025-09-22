@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公式学习 - 会枝Cubing</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/algorithms.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1>会枝Cubing</h1>
+                <div class="user-actions">
+                    <a href="user/login.html">登录</a>
+                    <a href="user/register.html">注册</a>
+                    <a href="admin/login.html">管理员</a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="competitions.html">赛事</a></li>
+                    <li><a href="rankings.html">排名</a></li>
+                    <li><a href="tutorials.html">教程</a></li>
+                    <li><a href="algorithms.html">公式</a></li>
+                    <li><a href="personal-records.html">成绩</a></li>
+                    <li><a href="rules.html">规则</a></li>
+                    <li><a href="organizers.html">组织者</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2>公式学习</h2>
+            
+            <div class="filters card">
+                <div class="filter-group">
+                    <label for="method">解法:</label>
+                    <select id="method">
+                        <option value="cfop">CFOP</option>
+                        <option value="roux">Roux</option>
+                        <option value="zz">ZZ</option>
+                        <option value="petrus">Petrus</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="category">类别:</label>
+                    <select id="category">
+                        <option value="all">全部</option>
+                        <option value="pll">PLL</option>
+                        <option value="oll">OLL</option>
+                        <option value="f2l">F2L</option>
+                        <option value="zbll">ZBLL</option>
+                        <option value="coll">COLL</option>
+                        <option value="ell">ELL</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="difficulty">难度:</label>
+                    <select id="difficulty">
+                        <option value="all">全部</option>
+                        <option value="beginner">入门</option>
+                        <option value="intermediate">中级</option>
+                        <option value="advanced">高级</option>
+                    </select>
+                </div>
+                
+                <button id="search-btn" class="btn primary">筛选</button>
+            </div>
+            
+            <div class="algorithms-grid">
+                <div class="algorithm-card card">
+                    <div class="algorithm-header">
+                        <h3>Sune (S)</h3>
+                        <span class="difficulty advanced">高级</span>
+                    </div>
+                    <div class="algorithm-content">
+                        <div class="algorithm-image">
+                            <img src="https://dummyimage.com/200x200/cccccc/ffffff&text=Algorithm+Image" alt="Sune算法图示">
+                        </div>
+                        <div class="algorithm-details">
+                            <p class="notation">R U R' U R U2 R'</p>
+                            <p class="description">Sune是CFOP方法中最重要的OLL公式之一，用于解决特定的顶层朝向问题。</p>
+                            <div class="algorithm-actions">
+                                <button class="btn">查看动画</button>
+                                <button class="btn">添加到学习计划</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="algorithm-card card">
+                    <div class="algorithm-header">
+                        <h3>T-Perm (T)</h3>
+                        <span class="difficulty intermediate">中级</span>
+                    </div>
+                    <div class="algorithm-content">
+                        <div class="algorithm-image">
+                            <img src="https://dummyimage.com/200x200/cccccc/ffffff&text=Algorithm+Image" alt="T-Perm算法图示">
+                        </div>
+                        <div class="algorithm-details">
+                            <p class="notation">R U R' U' R' F R2 U' R' U' R U R' F'</p>
+                            <p class="description">T-Perm是最常用的PLL公式之一，用于交换两个相邻的角块和两个相邻的棱块。</p>
+                            <div class="algorithm-actions">
+                                <button class="btn">查看动画</button>
+                                <button class="btn">添加到学习计划</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="algorithm-card card">
+                    <div class="algorithm-header">
+                        <h3>H-Perm (H)</h3>
+                        <span class="difficulty intermediate">中级</span>
+                    </div>
+                    <div class="algorithm-content">
+                        <div class="algorithm-image">
+                            <img src="https://dummyimage.com/200x200/cccccc/ffffff&text=Algorithm+Image" alt="H-Perm算法图示">
+                        </div>
+                        <div class="algorithm-details">
+                            <p class="notation">M2 U M2 U2 M2 U M2</p>
+                            <p class="description">H-Perm用于交换两个相对的棱块对，是处理H情况的PLL公式。</p>
+                            <div class="algorithm-actions">
+                                <button class="btn">查看动画</button>
+                                <button class="btn">添加到学习计划</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="algorithm-card card">
+                    <div class="algorithm-header">
+                        <h3>J-Perm (J)</h3>
+                        <span class="difficulty beginner">入门</span>
+                    </div>
+                    <div class="algorithm-content">
+                        <div class="algorithm-image">
+                            <img src="https://dummyimage.com/200x200/cccccc/ffffff&text=Algorithm+Image" alt="J-Perm算法图示">
+                        </div>
+                        <div class="algorithm-details">
+                            <p class="notation">R U R' F' R U R' U' R' F R2 U' R' U'</p>
+                            <p class="description">J-Perm用于交换两个相邻的角块和棱块，是初学者应该掌握的基本PLL公式。</p>
+                            <div class="algorithm-actions">
+                                <button class="btn">查看动画</button>
+                                <button class="btn">添加到学习计划</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="learning-plan card">
+                <h3>我的学习计划</h3>
+                <p>您还没有添加任何公式到学习计划中。<a href="#">创建学习计划</a></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 会枝Cubing (hzcubing.club). All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人成绩 - 会枝Cubing</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/personal-records.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1>会枝Cubing</h1>
+                <div class="user-actions">
+                    <a href="user/login.html">登录</a>
+                    <a href="user/register.html">注册</a>
+                    <a href="admin/login.html">管理员</a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="competitions.html">赛事</a></li>
+                    <li><a href="rankings.html">排名</a></li>
+                    <li><a href="tutorials.html">教程</a></li>
+                    <li><a href="algorithms.html">公式</a></li>
+                    <li><a href="personal-records.html">成绩</a></li>
+                    <li><a href="rules.html">规则</a></li>
+                    <li><a href="organizers.html">组织者</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2>个人成绩查询</h2>
+            
+            <div class="search-section card">
+                <form id="search-form">
+                    <div class="form-group">
+                        <label for="search-type">查询方式:</label>
+                        <select id="search-type">
+                            <option value="name">姓名</option>
+                            <option value="wca-id">WCA ID</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="search-input">查询内容:</label>
+                        <input type="text" id="search-input" placeholder="请输入姓名或WCA ID">
+                    </div>
+                    
+                    <button type="submit" class="btn primary">查询</button>
+                </form>
+            </div>
+            
+            <div class="results-section">
+                <div class="profile-header card">
+                    <div class="profile-info">
+                        <h3>张三</h3>
+                        <p>WCA ID: 2025ZHAN01</p>
+                        <p>地区: 杭州</p>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <h4>8</h4>
+                            <p>参赛次数</p>
+                        </div>
+                        <div class="stat">
+                            <h4>3</h4>
+                            <p>奖牌数</p>
+                        </div>
+                        <div class="stat">
+                            <h4>1</h4>
+                            <p>金牌数</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="records-table card">
+                    <h3>个人最好成绩</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>项目</th>
+                                <th>单次最好</th>
+                                <th>赛事</th>
+                                <th>日期</th>
+                                <th>平均最好</th>
+                                <th>赛事</th>
+                                <th>日期</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>三阶速拧</td>
+                                <td>4.89</td>
+                                <td>2025杭州春季赛</td>
+                                <td>2025-04-15</td>
+                                <td>6.23</td>
+                                <td>2025杭州春季赛</td>
+                                <td>2025-04-15</td>
+                            </tr>
+                            <tr>
+                                <td>二阶速拧</td>
+                                <td>1.25</td>
+                                <td>2025杭州春季赛</td>
+                                <td>2025-04-15</td>
+                                <td>2.15</td>
+                                <td>2025杭州春季赛</td>
+                                <td>2025-04-15</td>
+                            </tr>
+                            <tr>
+                                <td>四阶速拧</td>
+                                <td>32.45</td>
+                                <td>2025杭州春季赛</td>
+                                <td>2025-04-15</td>
+                                <td>35.67</td>
+                                <td>2025杭州春季赛</td>
+                                <td>2025-04-15</td>
+                            </tr>
+                            <tr>
+                                <td>三阶单手</td>
+                                <td>12.34</td>
+                                <td>2025杭州春季赛</td>
+                                <td>2025-04-15</td>
+                                <td>14.56</td>
+                                <td>2025杭州春季赛</td>
+                                <td>2025-04-15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="competition-history card">
+                    <h3>参赛历史</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>赛事名称</th>
+                                <th>日期</th>
+                                <th>地区</th>
+                                <th>名次</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025杭州春季赛</td>
+                                <td>2025-04-15</td>
+                                <td>杭州</td>
+                                <td>第1名</td>
+                            </tr>
+                            <tr>
+                                <td>2025杭州冬季赛</td>
+                                <td>2025-01-20</td>
+                                <td>杭州</td>
+                                <td>第3名</td>
+                            </tr>
+                            <tr>
+                                <td>2024杭州秋季赛</td>
+                                <td>2024-10-12</td>
+                                <td>杭州</td>
+                                <td>第5名</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 会枝Cubing (hzcubing.club). All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

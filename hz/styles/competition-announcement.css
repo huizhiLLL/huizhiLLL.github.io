@@ -1,0 +1,142 @@
+.announcement-header {
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.announcement-header h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.announcement-meta {
+    display: flex;
+    gap: 20px;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.announcement-content {
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+.content-section h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-table .label {
+    font-weight: bold;
+    width: 150px;
+}
+
+.participants-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.participant-item {
+    display: flex;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.participant-item:last-child {
+    border-bottom: none;
+}
+
+.participant-item .number {
+    width: 40px;
+    font-weight: bold;
+}
+
+.participant-item .name {
+    flex: 1;
+}
+
+.participant-item .region {
+    width: 100px;
+    color: #7f8c8d;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.schedule-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.announcement-footer {
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.pagination {
+    text-align: center;
+    padding: 15px;
+    color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+    .announcement-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .info-table .label {
+        width: 100px;
+    }
+    
+    .participant-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .participant-item .region {
+        width: auto;
+    }
+}

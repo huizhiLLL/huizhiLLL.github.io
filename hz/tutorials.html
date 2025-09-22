@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教程 - 会枝Cubing</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/tutorials.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1>会枝Cubing</h1>
+                <div class="user-actions">
+                    <a href="user/login.html">登录</a>
+                    <a href="user/register.html">注册</a>
+                    <a href="admin/login.html">管理员</a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="competitions.html">赛事</a></li>
+                    <li><a href="rankings.html">排名</a></li>
+                    <li><a href="tutorials.html">教程</a></li>
+                    <li><a href="algorithms.html">公式</a></li>
+                    <li><a href="personal-records.html">成绩</a></li>
+                    <li><a href="rules.html">规则</a></li>
+                    <li><a href="organizers.html">组织者</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2>魔方教程</h2>
+            
+            <div class="filters card">
+                <label for="level">难度:</label>
+                <select id="level">
+                    <option value="all">全部</option>
+                    <option value="beginner">入门</option>
+                    <option value="intermediate">中级</option>
+                    <option value="advanced">高级</option>
+                </select>
+                
+                <label for="cube-type">魔方类型:</label>
+                <select id="cube-type">
+                    <option value="all">全部</option>
+                    <option value="3x3">三阶魔方</option>
+                    <option value="2x2">二阶魔方</option>
+                    <option value="4x4">四阶魔方</option>
+                    <option value="5x5">五阶魔方</option>
+                    <option value="oh">单手</option>
+                    <option value="blind">盲拧</option>
+                </select>
+                
+                <button id="search-btn" class="btn primary">筛选</button>
+            </div>
+            
+            <div class="tutorial-grid">
+                <div class="tutorial-card card">
+                    <div class="tutorial-image">
+                        <img src="https://dummyimage.com/300x200/cccccc/ffffff&text=CFOP+Method" alt="CFOP方法">
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>CFOP方法入门教程</h3>
+                        <p class="level">难度: 中级</p>
+                        <p>CFOP是目前最流行的三阶魔方速解方法之一，包括Cross、F2L、OLL、PLL四个步骤。</p>
+                        <a href="#" class="btn">开始学习</a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card card">
+                    <div class="tutorial-image">
+                        <img src="https://dummyimage.com/300x200/cccccc/ffffff&text=Layer+By+Layer" alt="层先法">
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>层先法入门教程</h3>
+                        <p class="level">难度: 入门</p>
+                        <p>层先法是最基础的三阶魔方解法，适合初学者学习，通过逐层还原魔方。</p>
+                        <a href="#" class="btn">开始学习</a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card card">
+                    <div class="tutorial-image">
+                        <img src="https://dummyimage.com/300x200/cccccc/ffffff&text=Roux+Method" alt="Roux方法">
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>Roux方法进阶教程</h3>
+                        <p class="level">难度: 高级</p>
+                        <p>Roux是一种高效的解法，通过构建两个2x3块然后完成剩余部分来还原魔方。</p>
+                        <a href="#" class="btn">开始学习</a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card card">
+                    <div class="tutorial-image">
+                        <img src="https://dummyimage.com/300x200/cccccc/ffffff&text=2x2+Beginner" alt="二阶入门">
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>二阶魔方入门教程</h3>
+                        <p class="level">难度: 入门</p>
+                        <p>二阶魔方是入门魔方的最佳选择，学习基础的转动和还原方法。</p>
+                        <a href="#" class="btn">开始学习</a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card card">
+                    <div class="tutorial-image">
+                        <img src="https://dummyimage.com/300x200/cccccc/ffffff&text=4x4+Reduction" alt="四阶降阶法">
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>四阶魔方降阶法教程</h3>
+                        <p class="level">难度: 中级</p>
+                        <p>四阶魔方使用降阶法，通过将四阶魔方转化为三阶魔方来还原。</p>
+                        <a href="#" class="btn">开始学习</a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card card">
+                    <div class="tutorial-image">
+                        <img src="https://dummyimage.com/300x200/cccccc/ffffff&text=Blindfolded" alt="盲拧">
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>三阶盲拧入门教程</h3>
+                        <p class="level">难度: 高级</p>
+                        <p>盲拧是一种高级技巧，需要记忆魔方状态并通过特定算法还原。</p>
+                        <a href="#" class="btn">开始学习</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 会枝Cubing (hzcubing.club). All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
