@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>校记录 - 魔方社成绩系统</title>
+    <title>FCA Records - FDU Cubing</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,7 +14,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <i class="fas fa-cube"></i>
-                <span>魔方社成绩系统</span>
+                <span>FDU Cubing</span>
             </div>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">首页</a>
@@ -37,41 +37,49 @@
                 <div class="header-content">
                     <h1 class="page-title">
                         <i class="fas fa-trophy"></i>
-                        校记录
+                        FCA Records
                     </h1>
-                    <p class="page-subtitle">各魔方项目的最佳成绩记录</p>
+                    <p class="page-subtitle">复旦大学魔方社各项目最佳成绩记录</p>
                 </div>
             </div>
         </section>
 
-        <!-- 筛选器 -->
+        <!-- 筛选器和切换按钮 -->
         <section class="filters">
             <div class="container">
-                <div class="filter-group">
+                <!-- 记录类型切换 -->
+                <div class="record-type-switch">
+                    <button class="switch-btn active" id="current-records-btn" onclick="switchRecordType('current')">
+                        <i class="fas fa-trophy"></i>
+                        当前记录
+                    </button>
+                    <button class="switch-btn" id="history-records-btn" onclick="switchRecordType('history')">
+                        <i class="fas fa-history"></i>
+                        历史记录
+                    </button>
+                </div>
+                
+                <!-- 历史记录项目筛选 -->
+                <div class="filter-group" id="history-filter-group" style="display: none;">
                     <div class="filter-item">
-                        <label for="school-filter">学校</label>
-                        <select id="school-filter" class="filter-select">
-                            <option value="">全部学校</option>
-                            <option value="XX中学">XX中学</option>
-                            <option value="YY中学">YY中学</option>
-                        </select>
-                    </div>
-                    <div class="filter-item">
-                        <label for="project-filter">项目</label>
+                        <label for="project-filter">选择项目</label>
                         <select id="project-filter" class="filter-select">
-                            <option value="">全部项目</option>
-                            <option value="三阶">三阶</option>
+                            <option value="三阶" selected>三阶</option>
+                            <option value="二阶">二阶</option>
                             <option value="四阶">四阶</option>
                             <option value="五阶">五阶</option>
+                            <option value="六阶">六阶</option>
+                            <option value="七阶">七阶</option>
+                            <option value="三阶盲拧">三阶盲拧</option>
+                            <option value="最少步">最少步</option>
+                            <option value="三阶单手">三阶单手</option>
+                            <option value="魔表">魔表</option>
+                            <option value="五魔方">五魔方</option>
                             <option value="金字塔">金字塔</option>
-                            <option value="CFOP">CFOP</option>
+                            <option value="斜转">斜转</option>
+                            <option value="SQ1">SQ1</option>
+                            <option value="四阶盲拧">四阶盲拧</option>
                         </select>
-                    </div>
-                    <div class="filter-item">
-                        <button class="filter-reset" onclick="resetFilters()">
-                            <i class="fas fa-refresh"></i>
-                            重置筛选
-                        </button>
                     </div>
                 </div>
             </div>
@@ -80,8 +88,47 @@
         <!-- 校记录展示 -->
         <section class="records-section">
             <div class="container">
-                <div class="records-grid" id="records-grid">
-                    <!-- 校记录卡片将通过 JavaScript 动态生成 -->
+                <!-- 当前记录表格展示 -->
+                <div class="current-records" id="current-records">
+                    <div class="records-table-container">
+                        <table class="records-table" id="current-records-table">
+                            <thead>
+                                <tr>
+                                    <th>官方项目</th>
+                                    <th>姓名</th>
+                                    <th>年级</th>
+                                    <th>单次</th>
+                                    <th>平均</th>
+                                    <th>时间</th>
+                                    <th>比赛</th>
+                                </tr>
+                            </thead>
+                            <tbody id="current-records-table-body">
+                                <!-- 当前记录数据将通过 JavaScript 动态生成 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 历史记录表格展示 -->
+                <div class="history-records" id="history-records" style="display: none;">
+                    <div class="records-table-container">
+                        <table class="records-table" id="history-records-table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>年级</th>
+                                    <th>单次</th>
+                                    <th>平均</th>
+                                    <th>时间</th>
+                                    <th>比赛</th>
+                                </tr>
+                            </thead>
+                            <tbody id="history-records-table-body">
+                                <!-- 历史记录数据将通过 JavaScript 动态生成 -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 
                 <!-- 无数据提示 -->
@@ -99,8 +146,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>魔方社成绩系统</h4>
-                    <p>记录每一次突破，见证每一份成长</p>
+                    <h4>FCA Website</h4>
+                    <p>复旦大学魔方社官方成绩记录系统</p>
                 </div>
                 <div class="footer-section">
                     <h4>快速链接</h4>
@@ -111,11 +158,11 @@
                 </div>
                 <div class="footer-section">
                     <h4>联系我们</h4>
-                    <p>如有问题，请联系魔方社管理员</p>
+                    <p>如有问题，请联系FCA管理员</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 魔方社成绩系统. 保留所有权利.</p>
+                <p>&copy; 2025 FCA Website. All rights reserved.</p>
             </div>
         </div>
     </footer>
