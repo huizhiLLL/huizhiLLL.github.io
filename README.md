@@ -2,7 +2,6 @@
 
 - [test](https://huizhilll.github.io/hzcubing/)
 - [个人简历（？）](https://huizhilll.github.io/)
-- [FDU周赛的静态网站测试](https://huizhilll.github.io/WeekContest/)
 - [来自GAO的静态网页'hz'测试](https://huizhilll.github.io/hz/)
 ---
 <div align="right">
